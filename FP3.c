@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
-double function(double x, int n);
+double sumSerie(double x, int n);
 double factorial(int n);
 
 int main(int argc, char *argv[])
@@ -13,12 +13,12 @@ int main(int argc, char *argv[])
     scanf("%lf", &x);
     printf("Número de terminos: ");
     scanf("%d", &n);
-    res = function(x, n);
+    res = sumSerie(x, n);
     printf("El resultado de la suma de la serie es: %lf\n", res);
     return 0;
 }
 
-double function(double x, int n)
+double sumSerie(double x, int n)
 {
     double sum = 1;
     double factorialTerm;
