@@ -22,34 +22,34 @@ int main(int argc, char *argv[])
         correcto = 0;
 
         while(correcto == 0){
-        if (producto == respuesta){
-            switch (aleatorio(4))
-            {
-                case 0 :printf("Muy bien!\n");
-                        break;
-                case 1 :printf("Excelente!\n");
-                        break;
-                case 2 :printf("Buen trabajo!\n");
-                        break;
-                case 3 :printf("Sigue haciéndolo bien!\n");
-                        break;
+            if (producto == respuesta){
+                switch (aleatorio(4))
+                {
+                    case 0 :printf("Muy bien!\n");
+                            break;
+                    case 1 :printf("Excelente!\n");
+                            break;
+                    case 2 :printf("Buen trabajo!\n");
+                            break;
+                    case 3 :printf("Sigue haciéndolo bien!\n");
+                            break;
+                }
+                correcto = 1;
+            }else{
+                switch (aleatorio(4))
+                {
+                    case 0 :printf("No. Por favor trata de nuevo.\n");
+                            break;
+                    case 1 :printf("Incorrecto. Trata una vez más.\n");
+                            break;
+                    case 2 :printf("No te rindas!\n");
+                            break;
+                    case 3 :printf("No. Trata de nuevo.\n");
+                            break;
+                }
+                //printf("%s \n", incorrecto[aleatorio(4)]);
+                respuesta = multiplicar(num1, num2);
             }
-            correcto = 1;
-        }else{
-            switch (aleatorio(4))
-            {
-                case 0 :printf("No. Por favor trata de nuevo.\n");
-                        break;
-                case 1 :printf("Incorrecto. Trata una vez más.\n");
-                        break;
-                case 2 :printf("No te rindas!\n");
-                        break;
-                case 3 :printf("No. Trata de nuevo.\n");
-                        break;
-            }
-            //printf("%s \n", incorrecto[aleatorio(4)]);
-            respuesta = multiplicar(num1, num2);
-        }
         }
 
         printf("¿Continuar practicando? (1=SI  0=NO): ");
