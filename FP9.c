@@ -7,6 +7,7 @@ int multiplicar(int n, int m);
 
 int main(int argc, char *argv[])
 {
+    srand(time(NULL));
     int bandera = 1;
     int num1, num2, producto, respuesta, correcto;
     printf("Programa que ayudaría a un alumno de escuela de primaria a aprender a multiplicar.\n");
@@ -40,7 +41,6 @@ int main(int argc, char *argv[])
 
 int aleatorio()
 {
-    srand(time(NULL));
     return rand() %10;
 }
 
