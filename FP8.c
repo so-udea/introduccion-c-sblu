@@ -6,6 +6,9 @@ int lanzarMoneda();
 
 int main(int argc, char *argv[])
 {
+    srand(time(NULL)); /*Devuelve el número de segundos según el reloj del sistema
+    Esto con el fin de que la funcion rand() no arranque en el mismo numero
+    cada vez que es llamada*/
     char resultado[100];
     const char SEQUENCE_CHARS[] = {'C', 'S'};
     int n, lado;
@@ -46,8 +49,5 @@ int main(int argc, char *argv[])
 
 int lanzarMoneda()
 {
-    srand(time(NULL)); /*Devuelve el número de segundos según el reloj del sistema
-    Esto con el fin de que la funcion rand() no arranque en el mismo numero
-    cada vez que es llamada*/
     return rand() %2; /*Devuelve un entero entre 0 y La constante RAND_MAX que vale 32767 */   
 }
